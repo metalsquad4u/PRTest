@@ -19,8 +19,8 @@ jobs:
           branch: "auto-pr-branch"
           base: master
           title: "Demo Test for auto Pull Request"
-          committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}>
-          author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}>
+          committer: Abdulakeem <metalsquad4u@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           body: 
             This is the test automatic pull request creation and up for your review
           token: ${{ secrets.GITHUB_TOKEN }}
