@@ -18,11 +18,11 @@ jobs:
         with:
           branch: "auto-pr-branch"
           base: master
-          title: "Demo Test for auto Pull Request"
+          title: "Demo Test for auto Pull Request-7"
           committer: Abdulakeem <metalsquad4u@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           body: 
-            This is the test automatic pull request creation and up for your review
+            This is the test automatic pull request-7 creation and up for your review
           token: ${{ secrets.GITHUB_TOKEN }}
           #reviewers: sulazhy
           delete-branch: true
