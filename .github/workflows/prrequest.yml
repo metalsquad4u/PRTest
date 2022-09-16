@@ -16,9 +16,9 @@ jobs:
       - name: raise PR
         uses: peter-evans/create-pull-request@v4
         with:
-          branch: "auto-pr-branch"
+          branch: "auto-pr-branch-1"
           base: master
-          title: "Demo Test for auto Pull Request-8"
+          title: "Demo Test for auto Pull Request-9"
           committer: Abdulakeem <metalsquad4u@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           body: 
