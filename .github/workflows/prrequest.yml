@@ -1,28 +1,15 @@
 on:
-  push: 
+  push:
     branches:
-      - master
+    - feature
 
 jobs:
-  updateAuthor:
+  pull-request:
     runs-on: ubuntu-latest
     steps:
-      - name: checking out code
-        uses: actions/checkout@v3
-
-      #- name: update author information
-        #run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME}} > AUTHOR
-
-      - name: raise PR
-        uses: peter-evans/create-pull-request@v4
-        with:
-          branch: "auto-pr-branch-1"
-          base: master
-          title: "Demo Test for auto Pull Request-9"
-          committer: Abdulakeem <metalsquad4u@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          body: 
-            This is the test automatic pull request-8 creation and up for your review
-          token: ${{ secrets.GITHUB_TOKEN }}
-          #reviewers: sulazhy
-          delete-branch: true
+    - uses: actions/checkout@v2
+    - name: pull-request
+      uses: repo-sync/pull-request@v2
+      with:
+        destination_branch: "master"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
