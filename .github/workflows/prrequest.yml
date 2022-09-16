@@ -1,7 +1,7 @@
 on:
   push: 
     branches:
-      - master
+      - feature
 
 jobs:
   updateAuthor:
@@ -16,8 +16,8 @@ jobs:
       - name: raise PR
         uses: peter-evans/create-pull-request@v4
         with:
-          branch: "auto-pr-branch-1"
-          base: master
+          branch: "auto-pr-branch-feature"
+          base: feature
           title: "Demo Test for auto Pull Request-9"
           committer: Abdulakeem <metalsquad4u@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
