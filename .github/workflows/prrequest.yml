@@ -13,5 +13,6 @@ jobs:
       with:
         destination_branch: "master"
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        pr_title: "Pull Request 11" # Title of pull request
+        pr_title: "Pull Request 12" # Title of pull request
         pr_body: "I want to merge from feature branch to main"
+        pr_reviewer: "YAbdul" 
